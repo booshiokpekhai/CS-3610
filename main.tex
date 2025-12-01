@@ -1,0 +1,138 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{minted} % For code with syntax highlighting
+\usepackage{enumitem}
+
+\setlength{\parskip}{0.9em}
+\setlength{\parindent}{0pt}
+
+\title{CS 3610 Project \\ \large{Using Generative AI for Algorithmic Design}}
+\author{Your Name \\ Student ID \\ Group Members (if any)}
+\date{December 2, 2025}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+% ---------------------------------------------------------
+\section{Introduction}
+% ---------------------------------------------------------
+
+% NOTE: You MUST write this section yourself.
+I chose Google Gemini for this project because, based on my examination of existing generative AI tools, it looks to provide the best overall performance for the tasks at hand, particularly mathematical proofs, complexity analysis, and pseudocode creation.  Even though this is my first time using Gemini, the study I've done on its reasoning powers, accuracy, and technical domain performance has given me confidence that it will be able to properly support the project's various components.
+
+Because the project involves building approximation algorithms, assessing greedy techniques for De Bruijn sequences, and investigating a research-level problem like the Big-3 pancake graph, I anticipate that Gemini's multi-step reasoning skills will be especially useful.  I anticipate that it will help with pseudocode generation, proof structure suggestions, and elucidating complex algorithmic concepts.  At the same time, I recognize that generative AI tools are not perfect—they might make logical errors or create results that sound compelling but are incorrect—so I intend to manually verify all algorithms, proofs, and complexity studies.
+
+Overall, I am excited to use generative AI as a support tool throughout this project.  While this will be my first practical experience with Gemini, I anticipate it being great for generating ideas, boosting clarity, and assisting with technical formatting.  Ultimately, I want to utilize the technology to improve my understanding and workflow, rather than to replace my own analysis or judgment.
+
+% ---------------------------------------------------------
+\section{Design and Analyze an Approximation Algorithm}
+% ---------------------------------------------------------
+
+\subsection{Chosen NP-hard Problem}
+Describe the problem you chose. If NP-hardness was not covered in class, include a citation showing the NP-hardness proof.
+
+\subsection{Approximation Algorithm}
+
+\begin{algorithm}[h]
+\caption{Your Approximation Algorithm}
+\begin{algorithmic}[1]
+\State Input: ...
+\State Output: ...
+\State ...
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Approximation Ratio Proof}
+Provide a full, rigorous proof that your algorithm achieves an $\alpha$-approximation, showing:
+\[
+\frac{OPT(X)}{A(X)} \le \alpha
+\quad \text{or} \quad
+\frac{A(X)}{OPT(X)} \le \alpha.
+\]
+
+\subsection{Does Every NP-hard Problem Have a Constant-Factor Approximation?}
+Your justified answer goes here.
+
+% ---------------------------------------------------------
+\section{Explore a Solved Research-Level Problem: De Bruijn Sequences}
+% ---------------------------------------------------------
+
+\subsection{Greedy Algorithm Chosen}
+State which algorithm you selected:
+\begin{itemize}
+    \item Prefer-1
+    \item Prefer-0
+    \item Prefer-same
+    \item Prefer-opposite
+\end{itemize}
+
+\subsection{Pseudocode}
+
+\begin{algorithm}[h]
+\caption{Your Greedy De Bruijn Algorithm}
+\begin{algorithmic}[1]
+\State Input: ...
+\State ...
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Correctness Proof}
+Provide a clear proof that:
+\begin{itemize}
+    \item The algorithm never gets stuck.
+    \item No length-$n$ string is repeated.
+    \item The final length is $2^n$.
+\end{itemize}
+
+\subsection{Complexity Analysis}
+Provide and justify time and space complexity.
+
+% ---------------------------------------------------------
+\section{Explore an Unsolved Research-Level Problem: Big-3 Pancake Problem}
+% ---------------------------------------------------------
+
+\subsection{Algorithm for Generating a Hamilton Cycle or Long Path}
+
+Write pseudocode here, OR include your full code using the minted package:
+
+\begin{minted}[fontsize=\small]{python}
+# Your Python code goes here
+def pancake_flip(seq, k):
+    return list(reversed(seq[:k])) + seq[k:]
+
+# etc.
+\end{minted}
+
+\subsection{Flip Sequence for n = 6 (More Than 72 Flips)}
+
+Type your flip sequence here, separated by spaces:
+
+\begin{verbatim}
+6 5 6 4 6 5 4 6 ...
+\end{verbatim}
+
+(Include the full sequence you generated.)
+
+% ---------------------------------------------------------
+\section{Reflection}
+% ---------------------------------------------------------
+
+% NOTE: You MUST write this section yourself.
+Write your reflection here (max 500 words). You may discuss:
+\begin{itemize}
+    \item What went well with AI
+    \item What did not go well
+    \item Limitations of AI
+    \item Whether your own algorithms differed from the AI's
+    \item How your opinion of AI changed
+    \item Whether you trust AI on research-level problems
+\end{itemize}
+
+% ---------------------------------------------------------
+\end{document}
